@@ -1,0 +1,2 @@
+$('#cart').html("<%= j render 'cart/cart' %>");
+<%= link_to "#{current_order.order_items.size} value of items $#{current_order.subtotal}", cart_path %>
