@@ -8,7 +8,7 @@
 }
 body
 {
-    background-image: url("/home.jpg");
+    background-image: linear-gradient(to left,red,orange);
 }
 .row.page-container {
     padding: 0;
@@ -17,7 +17,10 @@ body
     height: 100%; 
     
 }
-
+.img-fluid {
+    width:15em;
+    height: 15em;
+}
 .title-card{
     
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -39,12 +42,12 @@ body
 }
 
 .home-page {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-size: 100% 100%;
-     
+        
     background-size: 100% 100%;
-    //background-color: #0f0;
+   // background-color: #70f;
 
 }
 .menu-page {
@@ -82,13 +85,16 @@ padding: 2em;
     height: 100vh;
     background-image: url("/menu.jpg");
     background-size: 100% 100%;
+    background-image: linear-gradient(to right,green,red);
 }
 
 .link-container {
     padding-left: 1em;
     padding-top: 0.25em;
+    font-size: large;
     .link {
-            color: blue;
+
+            color: #123;
     }
     .active {
         color: aqua;
@@ -107,6 +113,6 @@ padding: 2em;
 .reviews-content {
     width: 100vw;
     height: 100vh;
-    background-image: url("/menu.jpg");
+    background-image: linear-gradient(to right,green,red);
     background-size: 100% 100%;
 }

@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @page = 'home'
+    @content = 'home'
   end
 
   def catering
@@ -8,6 +9,7 @@ class PagesController < ApplicationController
   end
 
   def info
+    @content = 'info'
     @page = 'info'
   end
 end

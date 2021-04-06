@@ -1,4 +1,5 @@
 <div class="col-2">
+
 <h5 class="link-container">
     <%= link_to "Home", root_path, class: "link #{@content == 'home' ? 'active' : ''}" %>
 </h5>
@@ -8,15 +9,41 @@
 </h5>
 
 <h5 class="link-container">
-    <%= link_to "Catering", catering_path , class: "link #{@content == 'catering' ? 'active' : ''}" %>
+    <%= link_to "About", info_path , class: "link #{@content == 'info' ? 'active' : ''}" %>
+</h5>
+
+
+
+<% if current_user %>
+    <h5 class="link-container">
+    <%= link_to "Sign Out", destroy_user_session_path , method: :delete,class: "link #{@content == 'destroy_user_session' ? 'active' : ''}" %>
+</h5>
+
+<% else %>
+
+<h5 class="link-container">
+    <%= link_to "Sign Up", new_user_registration_path , class: "link #{@content == 'new_user_registration' ? 'active' : ''}" %>
 </h5>
 
 <h5 class="link-container">
-    <%= link_to "More Info", info_path , class: "link #{@content == 'about' ? 'active' : ''}" %>
+    <%= link_to "Sign In", new_user_session_path ,class: "link #{@content == 'new_user_session' ? 'active' : ''}" %>
+</h5>
+<% end %>
+
+
+<% if current_user && current_user.admin %>
+<h5 class="link-container">
+    <%= link_to "Products", products_path ,class: "link #{@content == 'products' ? 'active' : ''}" %>
 </h5>
 
 <h5 class="link-container">
-    <%= link_to "Reviews", "", class: "link #{@content == 'reviews' ? 'active' : ''}" %>
+    <%= link_to "All Users", show_path ,method: :post,class: "link #{@content == 'show' ? 'active' : ''}" %>
+</h5>
+
+<% end %>
+
+<h5 class="link-container">
+    <%= link_to "Admin", new_user_session_path ,class: "link #{@content == 'new_user_session' ? 'active' : ''}" %>
 </h5>
 
 </div>
