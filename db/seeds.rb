@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!(email:'admim@gmail.com',
+User.create!(email:'admin2@gmail.com',
     password: 'abc@123',
     password_confirmation:'abc@123',
     admin:true            
@@ -18,21 +18,21 @@ Category.create!(title: 'sandwitch',description: 'good!',display:true)
 5.times do |i|
 burger = Product.new(
                         name: "Burger",
-                        description: "so yummy!so yummy! abcd efg hij klj lkhjhjj so yummy! abcd efg hij klj lkhjhjj",
+                        description: "A veggie burger is a burger patty that does not contain meat. These burgers may be made from ingredients like beans, especially soybeans and tofu, nuts, grains, seeds or fungi such as mushrooms or mycoprotein.",
                         price:110.99,
                         available:true,
                         category:Category.find(2)
                     )
 pizza = Product.new(
                         name: "Pizza",
-                        description: "so yummy!so yummy! abcd efg hij klj lkhjhjjso yummy! abcd efg hij klj lkhjhjj",
+                        description: "Pizza is a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta.",
                         price:110.99,
                         available:true,
                         category:Category.find(1)
                                 )
 sandwitch = Product.new(
                         name: "Sandwitch",
-                        description: "so yummy! abcd efg hij klj lkhjhjjso yummy! abcd efg hij klj lkhjhjj",
+                        description: "For grilling in veg sandwich in toaster – Butter the bread slices on the outer side. On the inner side spread the veggie mix and cover with another slice. Grill it in a sandwich toaster until golden. ",
                         price:110.99,
                         available:true,
                         category:Category.find(3)
